@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
+
 
 type FormValues = {
   email: string;
@@ -42,10 +44,11 @@ export default function LoginForm() {
       value: 6,
       message: 'Password must be at least 6 characters long'
     },
-    pattern: {
-      value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/,
-      message: 'Password must contain uppercase, lowercase, number and special character'
-    }
+  pattern: {
+  value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+  message: 'Password must contain uppercase, lowercase, number and special character'
+}
+
   };
 
   return (
@@ -136,12 +139,16 @@ export default function LoginForm() {
           )}
 
           <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
-              <a href="/signup" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
-                Create one here
-              </a>
-            </p>
+         <p className="text-sm text-gray-600">
+            Don't have an account?{' '}
+            <Link
+              to="/signup"
+              className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
+            >
+              Create one here
+            </Link>
+          </p>
+
           </div>
 
           <div className="mt-4 p-3 bg-blue-50 rounded-lg">

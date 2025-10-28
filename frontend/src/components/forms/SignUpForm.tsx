@@ -5,6 +5,8 @@ import Input from '../ui/Input';
 import Button from '../ui/Button';
 import { useRegisterMutation } from '../../hooks/useRegisterMutation';
 import type { RegisterPayload } from '../../api/userApi';
+import { Link } from 'react-router-dom';
+
 
 type FormValues = RegisterPayload;
 
@@ -244,14 +246,18 @@ export default function SignUpForm() {
             </div>
           )}
 
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
-              Already have an account?{' '}
-              <a href="/login" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
-                Sign in here
-              </a>
-            </p>
-          </div>
+       <div className="mt-6 text-center">
+          <p className="text-sm text-gray-600">
+            Already have an account?{' '}
+            <Link
+              to="/login"
+              className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
+            >
+              Sign in here
+            </Link>
+          </p>
+        </div>
+
         </form>
       </div>
     </div>
