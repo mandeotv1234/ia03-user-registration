@@ -22,7 +22,7 @@ export default function Button({
   
   const variants = {
     primary: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl focus:ring-blue-500',
-    secondary: 'bg-gray-500 hover:bg-gray-200 text-gray-900 border border-gray-300 focus:ring-gray-500',
+    secondary: 'bg-black hover:bg-gray-200 text-gray-900 border border-gray-300 focus:ring-gray-500',
     ghost: 'bg-transparent hover:bg-gray-100 text-gray-700 focus:ring-gray-500',
     danger: 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg hover:shadow-xl focus:ring-red-500',
   };
